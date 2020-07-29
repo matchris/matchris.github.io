@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var apiRoot = 'https://dashboard.heroku.com/apps/stark-shelf-61704/v1/task/';
+  var apiRoot = 'https://safe-earth-18840.herokuapp.com/v1/task/';
   var datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   var tasksContainer = $('[data-tasks-container]');
 
