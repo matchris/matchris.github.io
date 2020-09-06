@@ -1,6 +1,7 @@
 $(document).ready(function() {
   const apiRoot = 'https://safe-earth-18840.herokuapp.com/v1/task/';
   const trelloApiRoot = 'https://safe-earth-18840.herokuapp.com/v1/trello/';
+
   const datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   const $tasksContainer = $('[data-tasks-container]');
 
@@ -38,9 +39,9 @@ $(document).ready(function() {
   function prepareBoardOrListSelectOptions(availableChoices) {
     return availableChoices.map(function(choice) {
       return $('<option>')
-                .addClass('crud-select__option')
-                .val(choice.id)
-                .text(choice.name || 'Unknown name');
+          .addClass('crud-select__option')
+          .val(choice.id)
+          .text(choice.name || 'Unknown name');
     });
   }
 
@@ -55,10 +56,10 @@ $(document).ready(function() {
       var $availableBoardsOptionElements = prepareBoardOrListSelectOptions(boards);
 
       $datatableRowEl.find('[data-board-name-select]')
-        .append($availableBoardsOptionElements);
+          .append($availableBoardsOptionElements);
 
       $datatableRowEl
-        .appendTo($tasksContainer);
+          .appendTo($tasksContainer);
     });
   }
 
